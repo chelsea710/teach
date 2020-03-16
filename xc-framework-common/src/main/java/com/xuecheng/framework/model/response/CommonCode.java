@@ -14,6 +14,7 @@ public enum CommonCode implements ResultCode{
 
     SUCCESS(true,10000,"操作成功！"),
     FAIL(false,11111,"操作失败！"),
+    CHOOSESITR(false,10,"请先选择站点"),
     UNAUTHENTICATED(false,10001,"此操作需要登陆系统！"),
     UNAUTHORISE(false,10002,"权限不足，无权操作！"),
     SERVER_ERROR(false,99999,"抱歉，系统繁忙，请稍后重试！");
