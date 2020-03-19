@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b9cc34d-6c3f-42ab-ba40-c0fc4a970c3a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-freemarker/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-freemarker/src/main/java/com/xuecheng/test/freemarker/FreemarkerTestApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-freemarker/src/main/java/com/xuecheng/test/freemarker/controller/FreemarkerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-freemarker/src/main/java/com/xuecheng/test/freemarker/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-freemarker/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-freemarker/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-freemarker/src/main/resources/templates/test1.ftl" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test-freemarker/src/test/java/com/xuecheng/test/freemarker/FreemarkerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-freemarker/src/test/resources/templates/test1.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-freemarker/test-freemarker.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/xc-framework-model/target/" />
     <ignored path="$PROJECT_DIR$/xc-service-api/target/" />
@@ -113,8 +99,8 @@
       <file leaf-file-name="FreemarkerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test-freemarker/src/test/java/com/xuecheng/test/freemarker/FreemarkerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="711">
-              <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+            <state relative-caret-position="1609">
+              <caret line="125" column="26" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -208,9 +194,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="width" value="1940" />
-    <option name="height" value="2111" />
+    <option name="x" value="-12" />
+    <option name="width" value="1941" />
+    <option name="height" value="2112" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -615,19 +601,29 @@
       <workItem from="1584497053139" duration="8599000" />
       <workItem from="1584515359675" duration="7333000" />
     </task>
+    <task id="LOCAL-00001" summary="freeMarker">
+      <created>1584543673554</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584543673554</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
     <history-entry file="FreemarkerTest_testGenerateHtml - 2020.03.18 at 22h 53m 55s.xml">
       <configuration name="FreemarkerTest.testGenerateHtml" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="FreemarkerTest_testGenerateStringHtml - 2020.03.18 at 23h 00m 31s.xml">
+      <configuration name="FreemarkerTest.testGenerateStringHtml" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20314000" />
+    <option name="totallyTimeSpent" value="20474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -646,12 +642,12 @@
       <window_info id="Image Layers" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21214451" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45887777" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.018742679" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11128465" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11128465" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" />
@@ -692,6 +688,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="freeMarker" />
+    <option name="LAST_COMMIT_MESSAGE" value="freeMarker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -999,8 +999,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test-freemarker/src/test/java/com/xuecheng/test/freemarker/FreemarkerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="67" column="30" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
+        <state relative-caret-position="1609">
+          <caret line="125" column="26" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
