@@ -74,4 +74,13 @@ public class UserService {
         }
         return "success";
     }
+
+    public List<User> testInnerJoinUser() {
+        return userMapper.testInnerJoinUser();
+    }
+
+
+    public List<User> testAssociaion() {
+        return userMapper.testInnerJoinUser();
+    }
 }

@@ -32,4 +32,16 @@ public class UserController {
     public String updateByBatch(){
         return userService.updateByBatch();
     }
+
+    @GetMapping("/testInnerJoinUser")
+    @ResponseBody
+    public List<User> testInnerJoinUser(){
+        return userService.testInnerJoinUser();
+    }
+
+    @GetMapping
+    @ResponseBody
+    public List<User> testAssociaion(){
+        return userService.testAssociaion();
+    }
 }

@@ -12,5 +12,6 @@ public class User {
     private String userName;
     private String passWord;
     private String realName;
+    private UserLinkeCourse userLinkeCourses;
     private List<Course> courses;
 }

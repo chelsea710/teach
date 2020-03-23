@@ -2,18 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sjr.dao.UserMapper">
 
-    <resultMap id="userMap" type="com.sjr.model.User">
-        <result column="id" jdbcType="INTEGER" property="id" />
-        <result column="userName" jdbcType="VARCHAR" property="userName" />
-        <result column="passWord" jdbcType="VARCHAR" property="passWord" />
-        <result column="realName" jdbcType="VARCHAR" property="realName" />
-    </resultMap>
+<cache eviction="FIFO"
+       flushInterval="60000"
+       size="512"
+       readOnly="true"
+>
 
-    <select id="selAll"  resultMap="userMap">
+</cache>
+
+    <select id="selAll"  resultType="user">
         select * from user
     </select>
 
-    <select id="selUserByUserName" parameterType="java.lang.String" resultMap="userMap">
+    <select id="selUserByUserName" parameterType="java.lang.String" resultType="user">
         select <include refid="userColumns"><property name="table_name" value="user"/></include>
         from `user` where userName like #{userName}
     </select>
@@ -36,7 +37,38 @@
             </foreach>
     </update>
     
-    
+
+
+    <select id="testInnerJoinUser" resultMap="userResultMap" >
+        select `user`.id,`user`.userName,`user`.realName,`course`.courseName,`course`.id as courseId,
+        `user_linke_course`.id as userLinkeId,
+           `user_linke_course`.user_id as userLinkeUserId,
+           `user_linke_course`.course_id as userLinkeCourseId
+        from `user`
+            left join `user_linke_course` on `user`.id = `user_linke_course`.user_id
+            left join `course` on `user_linke_course`.course_id = `course`.id
+            where `user`.id in ('1','2')
+    </select>
+
+    <resultMap id="userResultMap" type="user"  >
+        <result property="id" column="id"></result>
+        <result property="userName" column="userName"></result>
+        <result property="passWord" column="passWord"></result>
+        <result property="realName" column="realName"></result>
+        <association property="userLinkeCourses"  resultMap="userLinkeCourse"  >
+        </association>
+        <collection property="courses" ofType="course" >
+            <id property="course_id" column="courseId" ></id>
+            <result property="courseName" column="courseName"></result>
+        </collection>
+    </resultMap>
+
+    <resultMap id="userLinkeCourse" type="userLinkeCourse" >
+        <id property="id" column="userLinkeId"></id>
+        <result property="userId" column="userLinkeUserId"></result>
+        <result property="courseId" column="userLinkeCourseId"></result>
+    </resultMap>
+
     <!--<resultMap id="UserResult" type="User" >-->
         <!--<id property="id" column="user_id"></id>-->
         <!--<result column="userName" property="userName"></result>-->
