@@ -27,7 +27,7 @@ public class UserController {
         return userService.saveAll();
     }
 
-    @PutMapping("/updateByBatch")
+    @PutMapping("/updateByBatch") 
     @ResponseBody
     public String updateByBatch(){
         return userService.updateByBatch();
