@@ -1,5 +1,9 @@
 package com.xuecheng.test.freemarker;
 
+import com.xuecheng.framework.domain.cms.CmsPage;
+import com.xuecheng.framework.model.response.QueryResponseResult;
+import com.xuecheng.framework.model.response.ResponseResult;
+import com.xuecheng.test.freemarker.client.CmsInterface;
 import com.xuecheng.test.freemarker.model.Student;
 import freemarker.cache.StringTemplateLoader;
 import freemarker.template.Configuration;
@@ -8,9 +12,12 @@ import freemarker.template.TemplateException;
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -22,6 +29,11 @@ import java.util.*;
 @RunWith(SpringRunner.class)
 public class FreemarkerTest {
 
+    @Autowired
+    private CmsInterface cmsInterface;
+
+    @Autowired
+    private RestTemplate restTemplate;
 
     @Test
     public void testGenerateHtml() throws IOException, TemplateException {
@@ -123,5 +135,18 @@ public class FreemarkerTest {
                 "</#list>\n" +
                 "</body>\n" +
                 "</html>";
+    }
+
+
+    @Test
+    public void ribbonTest(){
+        ResponseEntity<Map> forEntity = restTemplate.getForEntity("http://XC-SERVICE-MANAGE-CMS/cms/page/list/1/2", Map.class);
+        System.out.println(forEntity.getBody());
+    }
+
+    @Test
+    public void FeignTest(){
+        QueryResponseResult list = cmsInterface.findList(1, 10);
+        System.out.println(list.getQueryResult().getList());
     }
 }

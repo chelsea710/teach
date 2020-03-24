@@ -9,6 +9,8 @@ public class QueryResponseResult extends ResponseResult {
 
     QueryResult queryResult;
 
+    public QueryResponseResult(){};
+
     public QueryResponseResult(ResultCode resultCode,QueryResult queryResult){
         super(resultCode);
        this.queryResult = queryResult;
