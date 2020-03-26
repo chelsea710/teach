@@ -11,21 +11,31 @@ spring:
     cache: false
     settings:
       template_update_delay: 0
-
-eureka:
-  client:
-    register-with-eureka: true #是否将自己注册到eureka服务器中
-    fetch-registry: true #服务发现,是否从eureka中获取注册信息
-    service-url:
-      defaultZone: ${EUREKA_SERVER:http://eureka02:50102/eureka/,http://eureka01:50101/eureka/}
-  server:
-    enable-self-preservation: false
-    eviction-interval-timer-in-ms: 60000
-  instance:
-    prefer-ip-address: true
-    ip-address: 127.0.0.1
-    instance-id: ${spring.application.name}:${server.port}
+  rabbitmq:
+        host: 127.0.0.1
+        port: 5672
+        username: guest
+        password: guest
+        virtualHost: /
+#eureka:
+#  client:
+#    register-with-eureka: true #是否将自己注册到eureka服务器中
+#    fetch-registry: true #服务发现,是否从eureka中获取注册信息
+#    service-url:
+#      defaultZone: ${EUREKA_SERVER:http://eureka02:50102/eureka/,http://eureka01:50101/eureka/}
+#  server:
+#    enable-self-preservation: false
+#    eviction-interval-timer-in-ms: 60000
+#  instance:
+#    prefer-ip-address: true
+#    ip-address: 127.0.0.1
+#    instance-id: ${spring.application.name}:${server.port}
 
 logging:
   level:
     root: warn
+
+xuecheng:
+    mq:
+      queue: queue_cms_postpage_01
+      routingKey: 5a751fab6abb5044e0d19ea1
